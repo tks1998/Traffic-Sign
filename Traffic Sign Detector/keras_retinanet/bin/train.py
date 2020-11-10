@@ -349,7 +349,7 @@ def main(args=None):
             backbone_retinanet=retinanet,
             backbone=args.backbone,
             num_classes=train_generator.num_classes(),
-            weights=None,
+            weights=weights,
             multi_gpu=args.multi_gpu,
             freeze_backbone=args.freeze_backbone
         )
