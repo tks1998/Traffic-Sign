@@ -45,7 +45,7 @@ from ..utils.model import freeze as freeze_model
 
 
 def get_session():
-    config = tf.compat.v1.ConfigProto()
+    config = tf.compat.v1.ConfigProto(device_count={"GPU": 0})
     config.gpu_options.allow_growth = True
     return tf.compat.v1.Session(config=config)
 
