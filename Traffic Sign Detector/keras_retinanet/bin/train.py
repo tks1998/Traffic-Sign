@@ -45,10 +45,9 @@ from ..utils.model import freeze as freeze_model
 
 
 def get_session():
-    config = tf.compat.v1.ConfigProto
+    config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
-    return tf.Session(config=config)
-
+    return tf.compat.v1.Session(config=config)
 
 def model_with_weights(model, weights, skip_mismatch):
     if weights is not None:
