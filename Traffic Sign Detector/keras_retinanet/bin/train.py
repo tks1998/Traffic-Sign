@@ -180,6 +180,7 @@ def create_generators(args):
             batch_size=args.batch_size
         )
     elif args.dataset_type == 'csv':
+        print('TRAINING WITH CSV')
         train_generator = CSVGenerator(
             args.annotations,
             args.classes,
